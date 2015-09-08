@@ -25,4 +25,11 @@ final class ApplicationModule {
     Application provideApplication() {
         return mApplication;
     }
+
+    @Provides
+    @Singleton
+    RequestQueue provideRequestQueue() {
+//        return new RequestQueue(null, new BasicNetwork(new HurlStack()));
+        return Volley.newRequestQueue(mApplication);
+    }
 }
