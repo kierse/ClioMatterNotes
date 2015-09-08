@@ -35,4 +35,8 @@ dependencies {
 
     // Volley
     compile 'com.mcxiaoke.volley:library:1.0.19'
+
+    // AutoParcel
+    compile 'com.github.frankiesardo:auto-parcel:0.3'
+    apt 'com.github.frankiesardo:auto-parcel-processor:0.3'
 }
