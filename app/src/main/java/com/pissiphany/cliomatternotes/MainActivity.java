@@ -1,16 +1,37 @@
 package com.pissiphany.cliomatternotes;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class MainActivity extends AppCompatActivity {
+import com.android.volley.RequestQueue;
+import com.pissiphany.cliomatternotes.di.component.DaggerMainActivityComponent;
+import com.pissiphany.cliomatternotes.di.component.MainActivityComponent;
+import com.pissiphany.cliomatternotes.di.HasComponent;
+import com.pissiphany.cliomatternotes.di.module.MainActivityModule;
+
+import javax.inject.Inject;
+import javax.inject.Named;
+
+public class MainActivity extends BaseActivity implements HasComponent<MainActivityComponent> {
+    private MainActivityComponent mComponent;
+
+    @Inject
+    RequestQueue sQueue;
+
+    @Inject
+    @Named("random one")
+    String mRandomString;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mComponent = DaggerMainActivityComponent.builder()
+                .applicationComponent(getApplicationComponent())
+                .mainActivityModule(new MainActivityModule())
+                .build();
     }
 
     @Override
@@ -33,5 +54,10 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public MainActivityComponent getComponent() {
+        return this.mComponent;
     }
 }
