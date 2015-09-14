@@ -2,30 +2,28 @@ package com.pissiphany.cliomatternotes;
 
 import android.app.Application;
 
-import dagger.Component;
+import com.pissiphany.cliomatternotes.di.component.ApplicationComponent;
+import com.pissiphany.cliomatternotes.di.component.DaggerApplicationComponent;
+import com.pissiphany.cliomatternotes.di.module.ApplicationModule;
+import com.pissiphany.cliomatternotes.di.module.NetworkModule;
 
 /**
  * Created by kierse on 15-09-07.
  */
 public class ClioApplication extends Application {
-    private ClioApplicationComponent mComponent;
-
-    @Component(modules = {ApplicationModule.class})
-    interface ClioApplicationComponent {
-        ClioApplication injectApplication(ClioApplication app);
-    }
+    private ApplicationComponent sComponent;
 
     @Override
     public void onCreate() {
         super.onCreate();
 
-        this.mComponent = DaggerClioApplication_ClioApplicationComponent.builder()
+        this.sComponent = DaggerApplicationComponent.builder()
                 .applicationModule(new ApplicationModule(this))
+                .networkModule(new NetworkModule())
                 .build();
-        mComponent.injectApplication(this);
     }
 
-    ClioApplicationComponent getComponent() {
-        return mComponent;
+    ApplicationComponent getComponent() {
+        return sComponent;
     }
 }

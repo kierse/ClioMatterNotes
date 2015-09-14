@@ -2,6 +2,8 @@ package com.pissiphany.cliomatternotes.di.module;
 
 import android.app.Application;
 
+import javax.inject.Singleton;
+
 import dagger.Module;
 import dagger.Provides;
 
@@ -17,7 +19,7 @@ public final class ApplicationModule {
     }
 
     @Provides
-//    @Singleton
+    @Singleton
     Application provideApplication() {
         return mApplication;
     }
