@@ -8,6 +8,11 @@ import com.pissiphany.cliomatternotes.annotation.AutoGson;
 
 /**
  * Created by kierse on 15-09-08.
+ *
+ * Based on ideas found at:
+ * https://github.com/frankiesardo/auto-parcel/issues/6
+ * https://gist.github.com/JakeWharton/0d67d01badcee0ae7bc9
+ * https://gist.github.com/Piasy/ebaf701e506b0b3d096d
  */
 public class AutoValueTypeAdapterFactory implements TypeAdapterFactory {
     @SuppressWarnings("unchecked")

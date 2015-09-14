@@ -25,6 +25,7 @@ public class ClioContentProvider extends ContentProvider {
     private static final int MATTERS = 100;
     private static final int MATTER_ID = 101;
 
+    // TODO port
     private  static final ClioUriMatcher sUriMatcher = new ClioUriMatcher(BaseContract.AUTHORITY);
     static {
         sUriMatcher.addUri(MatterContract.TABLE, MatterContract.CONTENT_TYPE, "", MATTERS);
@@ -33,6 +34,9 @@ public class ClioContentProvider extends ContentProvider {
 
     private ClioSqliteOpenHelper mClioSqliteOpenHelper;
 
+    // TODO port
+    // this is MUCH simpler than our current SelectionBuilder. This combined with SQLiteQueryBuilder
+    // should allow us to get rid of our current implementation.
     private static class SelectionBuilder {
         private List<String> mSelections;
         private List<String> mSelectionArgs;
@@ -154,6 +158,9 @@ public class ClioContentProvider extends ContentProvider {
 
         throw new UnsupportedOperationException("unknown table: " + uri);
     }
+
+    // TODO port
+    // this is better than checking if the matching number ends in a 1, which is bound to fail
 
     private Long extractRecordId(Uri uri) {
         Long id = null;
