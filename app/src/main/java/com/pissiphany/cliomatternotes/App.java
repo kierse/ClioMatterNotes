@@ -9,7 +9,7 @@ import com.pissiphany.cliomatternotes.di.module.ApplicationModule;
 /**
  * Created by kierse on 15-09-07.
  */
-public class ClioApplication extends Application {
+public class App extends Application {
     private ApplicationComponent sComponent;
 
     @Override

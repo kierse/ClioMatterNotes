@@ -9,6 +9,6 @@ import com.pissiphany.cliomatternotes.di.component.ApplicationComponent;
  */
 public class BaseActivity extends AppCompatActivity {
     protected ApplicationComponent getApplicationComponent() {
-        return ((ClioApplication) getApplicationContext()).getComponent();
+        return ((App) getApplicationContext()).getComponent();
     }
 }
