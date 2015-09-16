@@ -1,4 +1,4 @@
-package com.pissiphany.cliomatternotes;
+package com.pissiphany.matterexplorer;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

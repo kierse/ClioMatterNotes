@@ -1,10 +1,10 @@
-package com.pissiphany.cliomatternotes;
+package com.pissiphany.matterexplorer;
 
 import android.app.Application;
 
-import com.pissiphany.cliomatternotes.di.component.ApplicationComponent;
-import com.pissiphany.cliomatternotes.di.component.DaggerApplicationComponent;
-import com.pissiphany.cliomatternotes.di.module.ApplicationModule;
+import com.pissiphany.matterexplorer.di.component.ApplicationComponent;
+import com.pissiphany.matterexplorer.di.component.DaggerApplicationComponent;
+import com.pissiphany.matterexplorer.di.module.ApplicationModule;
 
 /**
  * Created by kierse on 15-09-07.

@@ -1,4 +1,4 @@
-package com.pissiphany.cliomatternotes.di;
+package com.pissiphany.matterexplorer.di;
 
 /**
  * Created by kierse on 15-09-12.

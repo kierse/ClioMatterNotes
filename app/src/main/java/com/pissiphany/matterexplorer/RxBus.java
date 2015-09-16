@@ -1,4 +1,4 @@
-package com.pissiphany.cliomatternotes;
+package com.pissiphany.matterexplorer;
 
 import javax.inject.Inject;
 import javax.inject.Singleton;

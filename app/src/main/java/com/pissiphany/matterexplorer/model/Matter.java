@@ -1,9 +1,9 @@
-package com.pissiphany.cliomatternotes.model;
+package com.pissiphany.matterexplorer.model;
 
 import android.os.Parcelable;
 import android.support.annotation.Nullable;
 
-import com.pissiphany.cliomatternotes.annotation.AutoGson;
+import com.pissiphany.matterexplorer.annotation.AutoGson;
 
 import java.util.Date;
 

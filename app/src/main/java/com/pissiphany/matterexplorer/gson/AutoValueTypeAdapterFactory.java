@@ -1,10 +1,10 @@
-package com.pissiphany.cliomatternotes.gson;
+package com.pissiphany.matterexplorer.gson;
 
 import com.google.gson.Gson;
 import com.google.gson.TypeAdapter;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
-import com.pissiphany.cliomatternotes.annotation.AutoGson;
+import com.pissiphany.matterexplorer.annotation.AutoGson;
 
 /**
  * Created by kierse on 15-09-08.

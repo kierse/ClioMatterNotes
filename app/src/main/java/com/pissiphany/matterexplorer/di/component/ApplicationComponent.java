@@ -1,11 +1,11 @@
-package com.pissiphany.cliomatternotes.di.component;
+package com.pissiphany.matterexplorer.di.component;
 
 import android.app.Application;
 
 import com.android.volley.RequestQueue;
-import com.pissiphany.cliomatternotes.RxBus;
-import com.pissiphany.cliomatternotes.di.module.ApplicationModule;
-import com.pissiphany.cliomatternotes.volley.NetworkEventHandler;
+import com.pissiphany.matterexplorer.RxBus;
+import com.pissiphany.matterexplorer.di.module.ApplicationModule;
+import com.pissiphany.matterexplorer.volley.NetworkEventHandler;
 
 import javax.inject.Singleton;
 

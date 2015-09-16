@@ -1,4 +1,4 @@
-package com.pissiphany.cliomatternotes.di.module;
+package com.pissiphany.matterexplorer.di.module;
 
 import android.app.Application;
 
@@ -6,9 +6,9 @@ import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.pissiphany.cliomatternotes.RxBus;
-import com.pissiphany.cliomatternotes.gson.AutoValueTypeAdapterFactory;
-import com.pissiphany.cliomatternotes.volley.NetworkEventHandler;
+import com.pissiphany.matterexplorer.RxBus;
+import com.pissiphany.matterexplorer.gson.AutoValueTypeAdapterFactory;
+import com.pissiphany.matterexplorer.volley.NetworkEventHandler;
 
 import javax.inject.Singleton;
 

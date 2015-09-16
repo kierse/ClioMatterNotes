@@ -1,4 +1,4 @@
-package com.pissiphany.cliomatternotes.provider.contract;
+package com.pissiphany.matterexplorer.provider.contract;
 
 import android.net.Uri;
 

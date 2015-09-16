@@ -2,8 +2,8 @@ package gson;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.pissiphany.cliomatternotes.gson.AutoValueTypeAdapterFactory;
-import com.pissiphany.cliomatternotes.model.Matter;
+import com.pissiphany.matterexplorer.gson.AutoValueTypeAdapterFactory;
+import com.pissiphany.matterexplorer.model.Matter;
 
 import junit.framework.TestCase;
 

@@ -1,8 +1,6 @@
-package com.pissiphany.cliomatternotes.provider.contract;
+package com.pissiphany.matterexplorer.provider.contract;
 
 import android.net.Uri;
-
-import com.pissiphany.cliomatternotes.provider.contract.BaseContract;
 
 /**
  * Created by kierse on 15-08-23.

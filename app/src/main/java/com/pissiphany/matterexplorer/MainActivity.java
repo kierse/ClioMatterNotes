@@ -1,14 +1,14 @@
-package com.pissiphany.cliomatternotes;
+package com.pissiphany.matterexplorer;
 
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.pissiphany.cliomatternotes.di.component.ActivityComponent;
-import com.pissiphany.cliomatternotes.di.HasComponent;
-import com.pissiphany.cliomatternotes.di.component.DaggerActivityComponent;
-import com.pissiphany.cliomatternotes.volley.event.FetchAndSaveEvent;
+import com.pissiphany.matterexplorer.di.component.ActivityComponent;
+import com.pissiphany.matterexplorer.di.HasComponent;
+import com.pissiphany.matterexplorer.di.component.DaggerActivityComponent;
+import com.pissiphany.matterexplorer.volley.event.FetchAndSaveEvent;
 
 import javax.inject.Inject;
 

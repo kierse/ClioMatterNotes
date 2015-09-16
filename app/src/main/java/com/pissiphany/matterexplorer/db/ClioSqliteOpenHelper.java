@@ -1,10 +1,10 @@
-package com.pissiphany.cliomatternotes.db;
+package com.pissiphany.matterexplorer.db;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.pissiphany.cliomatternotes.provider.contract.MatterContract;
+import com.pissiphany.matterexplorer.provider.contract.MatterContract;
 
 /**
  * Created by kierse on 15-08-23.

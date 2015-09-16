@@ -1,7 +1,7 @@
-package com.pissiphany.cliomatternotes.di.component;
+package com.pissiphany.matterexplorer.di.component;
 
-import com.pissiphany.cliomatternotes.MainActivity;
-import com.pissiphany.cliomatternotes.annotation.PerActivity;
+import com.pissiphany.matterexplorer.MainActivity;
+import com.pissiphany.matterexplorer.annotation.PerActivity;
 
 import dagger.Component;
 

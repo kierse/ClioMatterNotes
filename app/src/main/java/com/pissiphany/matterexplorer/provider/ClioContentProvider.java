@@ -1,4 +1,4 @@
-package com.pissiphany.cliomatternotes.provider;
+package com.pissiphany.matterexplorer.provider;
 
 import android.content.ContentProvider;
 import android.content.ContentUris;
@@ -9,9 +9,9 @@ import android.database.sqlite.SQLiteQueryBuilder;
 import android.net.Uri;
 import android.text.TextUtils;
 
-import com.pissiphany.cliomatternotes.db.ClioSqliteOpenHelper;
-import com.pissiphany.cliomatternotes.provider.contract.BaseContract;
-import com.pissiphany.cliomatternotes.provider.contract.MatterContract;
+import com.pissiphany.matterexplorer.db.ClioSqliteOpenHelper;
+import com.pissiphany.matterexplorer.provider.contract.BaseContract;
+import com.pissiphany.matterexplorer.provider.contract.MatterContract;
 
 import java.util.ArrayList;
 import java.util.Arrays;
