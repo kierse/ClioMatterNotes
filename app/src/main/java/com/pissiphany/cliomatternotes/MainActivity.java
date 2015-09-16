@@ -1,37 +1,59 @@
 package com.pissiphany.cliomatternotes;
 
 import android.os.Bundle;
+import android.os.PersistableBundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.android.volley.RequestQueue;
-import com.pissiphany.cliomatternotes.di.component.DaggerMainActivityComponent;
-import com.pissiphany.cliomatternotes.di.component.MainActivityComponent;
+import com.pissiphany.cliomatternotes.di.component.ActivityComponent;
 import com.pissiphany.cliomatternotes.di.HasComponent;
-import com.pissiphany.cliomatternotes.di.module.MainActivityModule;
+import com.pissiphany.cliomatternotes.di.component.DaggerActivityComponent;
+import com.pissiphany.cliomatternotes.volley.event.FetchAndSaveEvent;
 
 import javax.inject.Inject;
-import javax.inject.Named;
 
-public class MainActivity extends BaseActivity implements HasComponent<MainActivityComponent> {
-    private MainActivityComponent mComponent;
+public class MainActivity extends BaseActivity implements HasComponent<ActivityComponent> {
+    private static final String FETCH_DATA_KEY = "fetch_data";
 
-    @Inject
-    RequestQueue sQueue;
+    private ActivityComponent mComponent;
 
     @Inject
-    @Named("random one")
-    String mRandomString;
+    RxBus sBus;
+
+    private boolean mFetchData = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mComponent = DaggerMainActivityComponent.builder()
+        mComponent = DaggerActivityComponent.builder()
                 .applicationComponent(getApplicationComponent())
-                .mainActivityModule(new MainActivityModule())
                 .build();
+        mComponent.inject(this);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        if (!mFetchData) {
+            sBus.send(new FetchAndSaveEvent());
+        }
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState, PersistableBundle outPersistentState) {
+        super.onSaveInstanceState(outState, outPersistentState);
+
+        outState.putBoolean(FETCH_DATA_KEY, mFetchData);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+
+        mFetchData = savedInstanceState.getBoolean(FETCH_DATA_KEY);
     }
 
     @Override
@@ -57,7 +79,7 @@ public class MainActivity extends BaseActivity implements HasComponent<MainActiv
     }
 
     @Override
-    public MainActivityComponent getComponent() {
+    public ActivityComponent getComponent() {
         return this.mComponent;
     }
 }

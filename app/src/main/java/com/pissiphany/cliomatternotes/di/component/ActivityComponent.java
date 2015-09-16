@@ -9,9 +9,7 @@ import dagger.Component;
  * Created by kierse on 15-09-12.
  */
 @PerActivity
-@Component(
-        dependencies = {ApplicationComponent.class}
-)
+@Component(dependencies = {ApplicationComponent.class})
 public interface ActivityComponent {
     void inject(MainActivity activity);
 }
