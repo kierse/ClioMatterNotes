@@ -2,7 +2,6 @@ package com.pissiphany.cliomatternotes.di.component;
 
 import com.pissiphany.cliomatternotes.MainActivity;
 import com.pissiphany.cliomatternotes.annotation.PerActivity;
-import com.pissiphany.cliomatternotes.di.module.MainActivityModule;
 
 import dagger.Component;
 
@@ -11,9 +10,8 @@ import dagger.Component;
  */
 @PerActivity
 @Component(
-        dependencies = {ApplicationComponent.class},
-        modules = {MainActivityModule.class}
+        dependencies = {ApplicationComponent.class}
 )
-public interface MainActivityComponent {
+public interface ActivityComponent {
     void inject(MainActivity activity);
 }
